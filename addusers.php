@@ -1,5 +1,6 @@
 <?php
 include_once("connection.php");
+array_map("htmlspecialchars", $_POST);
 switch($_POST["role"]){
 	case "Pupil":
 		$role=0;
