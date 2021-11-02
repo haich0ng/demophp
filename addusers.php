@@ -1,5 +1,5 @@
 <?php
-header('Location: user.php');
+
 try{
 	include_once("connection.php");
 	array_map("htmlspecialchars", $_POST);
