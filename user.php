@@ -24,15 +24,17 @@
         <input type="submit" value="Add User">
       </form>
       
-</body>
-</html>
 <?php
 include_once('connection.php');
-$stmt = $conn->prepare("select* FROM TblUsers");
+$stmt = $conn->prepare("select * FROM tblusers");
 $stmt-> execute();
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC));
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
-echo($row["Forename"]." ".$row["Surname"]."<br>");
+echo($row["Forename"].' '.$row["Surname"]."<br>");
 }
-?>
+?>  
+</body>
+
+</html>
+
 
